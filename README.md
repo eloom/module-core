@@ -6,8 +6,8 @@ Os pacotes eloom são licenciados sobre os termos OSL-3.0 e AFL-3.0 e distribuí
 
 ## Links
 
-* [Web site](https://www.eloom.dev)
-* [Documentação](https://docs.eloom.dev)
-* [Issue tracker](https://github.com/eloomdev/module-core/issues)
+* [Web site](https://www.eloom.com.br)
+* [Documentação](https://docs.eloom.com.br)
+* [Issue tracker](https://github.com/eloom/module-core/issues)
 * [Composer packages](https://packagist.org/packages/eloom/module-core)
-* [Código fonte](https://github.com/eloomdev/module-core)
+* [Código fonte](https://github.com/eloom/module-core)

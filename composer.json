@@ -35,8 +35,5 @@
     "psr-4": {
       "Eloom\\Core\\": "src/module-core"
     }
-  },
-  "repositories": [
-    {"type": "composer", "url": "https://eloom.repo.repman.io"}
-  ]
+  }
 }
