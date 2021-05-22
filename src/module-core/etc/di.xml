@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	
+	<preference for="Eloom\Core\Model\ResourceModel\Taxvat\ValidatorResolverInterface"
+	            type="Eloom\Core\Model\ResourceModel\Taxvat\ValidatorResolver"/>
+	
+	<type name="Eloom\Core\Model\ResourceModel\Taxvat\ValidatorHandlerFactory">
+		<arguments>
+			<argument name="handlers" xsi:type="array">
+				<item name="ARS" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\ArgentinaHandler</item>
+				<item name="BRL" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\BrazilHandler</item>
+				<item name="CLP" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\ChileHandler</item>
+				<item name="COP" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
+				<item name="MXN" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
+				<item name="PAB" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
+				<item name="PEN" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\PeruHandler</item>
+			</argument>
+		</arguments>
+	</type>
+	
+	<type name="Eloom\Core\Model\ResourceModel\Taxvat\ValidatorResolver">
+		<arguments>
+			<argument name="validators" xsi:type="array">
+				<item name="ARS" xsi:type="string">ARS</item>
+				<item name="BRL" xsi:type="string">BRL</item>
+				<item name="CLP" xsi:type="string">CLP</item>
+				<item name="COP" xsi:type="string">COP</item>
+				<item name="MXN" xsi:type="string">MXN</item>
+				<item name="PAB" xsi:type="string">PAB</item>
+				<item name="PEN" xsi:type="string">PEN</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

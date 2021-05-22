@@ -1,0 +1,39 @@
+{
+  "name": "eloom/module-core",
+  "description": "Core para Magento 2",
+  "homepage": "https://www.eloom.com.br",
+  "keywords": [
+    "magento",
+    "magento 2",
+    "commerce",
+    "ecommerce",
+    "e-commerce",
+    "shop",
+    "eloom"
+  ],
+  "authors": [
+    {
+      "name": "eloom.com.br",
+      "email": "contato@eloom.com.br"
+    }
+  ],
+  "support": {
+    "email": "contato@eloom.com.br"
+  },
+  "require": {
+    "php": "~7.3|~7.4",
+    "magento/framework": "103.0.*"
+  },
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "src/module-core/registration.php"
+    ],
+    "psr-4": {
+      "Eloom\\Core\\": "src/module-core"
+    }
+  }
+}
