@@ -1,4 +1,4 @@
-# eloom - Plataforma de eCommerce para Magento 2 (Open Source)
+# Plataforma de eCommerce para Magento 2 - Module Core
 
 ## Licença
 
