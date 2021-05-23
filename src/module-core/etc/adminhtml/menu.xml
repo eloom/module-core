@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
 	<menu>
 		<add id="Eloom_Core::menu"
-				 title="Eloom"
+				 title="élOOm"
 				 module="Eloom_Core"
 				 action="adminhtml/system_config/edit/section/eloom"
 				 sortOrder="900"
