@@ -1,13 +1,13 @@
-# Plataforma de eCommerce para Magento 2 - Module Core
+# élOOm Core (Magento 2)
 
-## Licença
-
-Os pacotes eloom são licenciados sobre os termos OSL-3.0 e AFL-3.0 e distribuídos de forma Open Source.
+## Require
+* PHP/PHP-FPM: ~7.2 | ~7.3 | ~7.4
+* Magento/framework: 102.0.* | 103.0.*
 
 ## Links
 
 * [Web site](https://www.eloom.com.br)
 * [Documentação](https://docs.eloom.com.br)
 * [Issue tracker](https://github.com/eloom/module-core/issues)
-* [Composer packages](https://packagist.org/packages/eloom/module-core)
+* [Composer](https://app.repman.io/organization/eloom-open/package/32c29f92-a4c1-4813-9561-19a5722df11a/details)
 * [Código fonte](https://github.com/eloom/module-core)
