@@ -33,10 +33,15 @@ class BrazilHandler implements ValidatorHandlerInterface {
 			throw new TaxvatException();
 		}
 		
-		$valid = $this->isCPF($chars);
-		if (!$valid) {
-			$valid = $this->isCNPJ($chars);
+		$valid = false;
+		try {
+			$valid = $this->isCPF($chars);
+			if (!$valid) {
+				$valid = $this->isCNPJ($chars);
+			}
+		} catch (\Exception $e) {
 		}
+		
 		if (!$valid) {
 			throw new TaxvatException();
 		}
@@ -51,12 +56,12 @@ class BrazilHandler implements ValidatorHandlerInterface {
 	private function isCNPJ($c) {
 		$b = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
 		
-		for ($i = 0, $n = 0; $i < 12; $n += $c[$i] * $b[++$i]);
+		for ($i = 0, $n = 0; $i < 12; $n += $c[$i] * $b[++$i]) ;
 		
 		if ($c[12] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
 			return false;
 		}
-		for ($i = 0, $n = 0; $i <= 12; $n += $c[$i] * $b[$i++]);
+		for ($i = 0, $n = 0; $i <= 12; $n += $c[$i] * $b[$i++]) ;
 		
 		if ($c[13] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
 			return false;
@@ -66,13 +71,13 @@ class BrazilHandler implements ValidatorHandlerInterface {
 	}
 	
 	private function isCPF($c) {
-		for ($s = 10, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--);
+		for ($s = 10, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--) ;
 		
 		if ($c[9] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
 			return false;
 		}
 		
-		for ($s = 11, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--);
+		for ($s = 11, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--) ;
 		if ($c[10] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
 			return false;
 		}
