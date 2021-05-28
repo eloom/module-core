@@ -1,6 +1,6 @@
 resources:
   path:
-    api: https://store.eloom.com.br/rest/all
+    api: https://app.eloom.com.br/rest/all
     feed: https://blog.eloom.com.br/blog.rss
 
   services:
