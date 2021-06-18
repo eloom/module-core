@@ -1,7 +1,7 @@
 {
   "name": "eloom/module-core",
   "description": "élOOm Core para Magento 2",
-  "homepage": "https://www.eloom.com.br",
+  "homepage": "https://eloom.tech",
   "keywords": [
     "magento",
     "magento 2",
@@ -13,7 +13,7 @@
   ],
   "authors": [
     {
-      "name": "eloom.com.br",
+      "name": "eloom",
       "email": "suporte@eloom.com.br"
     }
   ],

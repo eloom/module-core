@@ -1,7 +1,7 @@
 resources:
   path:
-    api: https://app.eloom.com.br/rest/all
-    feed: https://blog.eloom.com.br/blog.rss
+    api: https://app.eloom.tech/rest/all
+    feed: https://eloom.tech/blog.rss
 
   services:
       active-license: V1/eloom/activeLicense
