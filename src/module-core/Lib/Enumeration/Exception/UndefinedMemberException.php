@@ -3,9 +3,9 @@
 * 
 * Core para Magento 2
 * 
-* @category     Ã©lOOm
+* @category     elOOm
 * @package      Modulo Core
-* @copyright    Copyright (c) 2021 Ã©lOOm (https://eloom.tech)
+* @copyright    Copyright (c) 2021 elOOm (https://eloom.tech)
 * @version      1.0.0
 * @license      https://opensource.org/licenses/OSL-3.0
 * @license      https://opensource.org/licenses/AFL-3.0
