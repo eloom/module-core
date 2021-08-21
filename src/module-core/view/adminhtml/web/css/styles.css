@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'icon';
+    src: url('../fonts/icon.eot');
+    src: url('../fonts/icon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icon.woff') format('woff'),
+    url('../fonts/icon.ttf') format('truetype'),
+    url('../fonts/icon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+.admin__menu li#menu-eloom-core-menu > a {
+    text-transform: none;
+}
+.admin__menu li#menu-eloom-core-menu > a::before {
+    content: '\e900';
+    font-family: 'icon';
+}

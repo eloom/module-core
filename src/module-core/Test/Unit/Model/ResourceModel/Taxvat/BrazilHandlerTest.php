@@ -13,7 +13,7 @@
 */
 declare(strict_types=1);
 
-namespace Dholi\Core\Test\Unit\Model\ResourceModel\Taxvat;
+namespace Eloom\Core\Test\Unit\Model\ResourceModel\Taxvat;
 
 use Eloom\Core\Exception\TaxvatException;
 use PHPUnit\Framework\TestCase;
