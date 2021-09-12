@@ -6,7 +6,7 @@
 * @category     elOOm
 * @package      Modulo Core
 * @copyright    Copyright (c) 2021 elOOm (https://eloom.tech)
-* @version      1.0.0
+* @version      1.0.1
 * @license      https://opensource.org/licenses/OSL-3.0
 * @license      https://opensource.org/licenses/AFL-3.0
 *
@@ -22,8 +22,8 @@ class DefaultHandler implements ValidatorHandlerInterface {
 	/**
 	 * @inheritDoc
 	 */
-	public function validate(string $taxvat): bool {
-		if ($taxvat == '') {
+	public function validate(string $taxvat = null): bool {
+		if (null == $taxvat || '' == $taxvat) {
 			throw new TaxvatException('Taxvat is required');
 		}
 		

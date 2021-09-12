@@ -6,7 +6,7 @@
 * @category     elOOm
 * @package      Modulo Core
 * @copyright    Copyright (c) 2021 elOOm (https://eloom.tech)
-* @version      1.0.0
+* @version      1.0.1
 * @license      https://opensource.org/licenses/OSL-3.0
 * @license      https://opensource.org/licenses/AFL-3.0
 *
@@ -24,7 +24,7 @@ interface ValidatorHandlerInterface {
 	 * @return boolean
 	 * @throws TaxvatException
 	 */
-	public function validate(string $taxvat): bool;
+	public function validate(string $taxvat = null): bool;
 	
 	/**
 	 * @return boolean
