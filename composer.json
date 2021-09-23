@@ -1,6 +1,6 @@
 {
   "name": "eloom/module-core",
-  "description": "élOOm Core para Magento 2",
+  "description": "élOOm Core para Magento",
   "homepage": "https://eloom.tech",
   "keywords": [
     "magento",
@@ -20,6 +20,8 @@
   "support": {
     "email": "suporte@eloom.com.br"
   },
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
   "require": {
     "php": "~7.2|~7.3|~7.4",
     "magento/framework": "102.0.*|103.0.*"
