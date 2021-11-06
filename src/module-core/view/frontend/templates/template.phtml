@@ -1,4 +1,6 @@
 <?php /** @var $block \Eloom\Core\Block\Template */?>
 <script>
-	window.eloomCore = <?php echo $block->getSerializedConfig() ?>;
+	window.eloom = window.eloom || {};
+	window.eloom.core = window.eloom.core || {};
+	window.eloom.core = <?php echo $block->getSerializedConfig() ?>;
 </script>
