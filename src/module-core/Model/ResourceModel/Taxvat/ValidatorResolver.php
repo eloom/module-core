@@ -6,7 +6,7 @@
 * @category     elOOm
 * @package      Modulo Core
 * @copyright    Copyright (c) 2021 elOOm (https://eloom.tech)
-* @version      1.0.2
+* @version      1.0.3
 * @license      https://opensource.org/licenses/OSL-3.0
 * @license      https://opensource.org/licenses/AFL-3.0
 *
@@ -16,17 +16,10 @@ declare(strict_types=1);
 namespace Eloom\Core\Model\ResourceModel\Taxvat;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\Session\SessionManagerInterface;
-use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Model\StoreManagerInterface;
 use Psr\Log\LoggerInterface;
 
 class ValidatorResolver implements ValidatorResolverInterface {
-	
-	/**
-	 * @var ScopeConfigInterface
-	 * @since 100.1.0
-	 */
-	protected $scopeConfig;
 	
 	/**
 	 * Available validators
@@ -38,32 +31,21 @@ class ValidatorResolver implements ValidatorResolverInterface {
 	 * @var LoggerInterface
 	 */
 	private $logger;
-	
-	/**
-	 * @var SessionManagerInterface
-	 */
-	private $session;
-	
-	/**
-	 * @param ScopeConfigInterface $scopeConfig
-	 * @param SessionManagerInterface $session
-	 * @param array $validators
-	 * @param LoggerInterface $logger
-	 */
-	public function __construct(ScopeConfigInterface $scopeConfig,
-	                            SessionManagerInterface $session,
+
+	protected $storeManager;
+
+	public function __construct(StoreManagerInterface $storeManager,
 	                            array $validators,
 	                            LoggerInterface $logger) {
-		$this->scopeConfig = $scopeConfig;
-		$this->session = $session;
+		$this->storeManager = $storeManager;
 		$this->validators = $validators;
 		$this->logger = $logger;
 	}
 	
 	public function getCurrentValidator() {
-		$storeId = $this->session->getStoreId();
-		$currency = $this->scopeConfig->getValue('currency/options/default', ScopeInterface::SCOPE_STORE, $storeId);
-		
+		$store = $this->storeManager->getStore();
+		$currency = $store->getCurrentCurrencyCode();
+
 		if (in_array($currency, $this->validators)) {
 			return $currency;
 		} else {
