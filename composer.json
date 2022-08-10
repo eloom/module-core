@@ -24,7 +24,7 @@
   "prefer-stable" : true,
   "require": {
     "php": "~8.1",
-    "magento/framework": "103.0.4"
+    "magento/framework": "103.0.*"
   },
   "license": [
     "OSL-3.0",
