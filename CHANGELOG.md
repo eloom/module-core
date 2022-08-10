@@ -1,5 +1,5 @@
 # 1.0.3
-## 21/02/2022
+## 09/08/2022
 1. [](#changed)
    * Currency is dynamically informed by the "Current Currency Code" of the Store Manager.
 
