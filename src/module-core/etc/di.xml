@@ -15,6 +15,7 @@
 				<item name="MXN" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
 				<item name="PAB" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
 				<item name="PEN" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\PeruHandler</item>
+				<item name="USD" xsi:type="string">Eloom\Core\Model\ResourceModel\Taxvat\DefaultHandler</item>
 			</argument>
 		</arguments>
 	</type>
@@ -29,6 +30,7 @@
 				<item name="MXN" xsi:type="string">MXN</item>
 				<item name="PAB" xsi:type="string">PAB</item>
 				<item name="PEN" xsi:type="string">PEN</item>
+				<item name="USD" xsi:type="string">USD</item>
 			</argument>
 		</arguments>
 	</type>
