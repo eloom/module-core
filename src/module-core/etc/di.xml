@@ -34,4 +34,44 @@
 			</argument>
 		</arguments>
 	</type>
+
+	<preference for="Eloom\Core\Api\AutocompleteInterface" type="Eloom\Core\Model\Autocomplete" />
+
+	<preference for="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolverInterface" type="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolver"/>
+
+	<type name="Eloom\Core\Model\Adminhtml\System\Config\Source\PostalCode\Engine">
+		<arguments>
+			<argument name="engines" xsi:type="array">
+				<item name="correios" xsi:type="string">Correios (BRA)</item>
+			</argument>
+		</arguments>
+	</type>
+	<type name="Eloom\Core\Model\Adminhtml\System\Config\Source\PostalCode\Engine">
+		<arguments>
+			<argument name="engines" xsi:type="array">
+				<item name="viacep" xsi:type="string">ViaCEP (BRA)</item>
+			</argument>
+		</arguments>
+	</type>
+
+	<type name="Eloom\Core\Model\ResourceModel\PostalCode\EngineHandlerFactory">
+		<arguments>
+			<argument name="handlers" xsi:type="array">
+				<item name="correios" xsi:type="string">Eloom\Core\Model\ResourceModel\PostalCode\CorreiosHandler</item>
+				<item name="viacep" xsi:type="string">Eloom\Core\Model\ResourceModel\PostalCode\ViaCepHandler</item>
+			</argument>
+		</arguments>
+	</type>
+
+	<type name="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolver">
+		<arguments>
+			<argument name="engines" xsi:type="array">
+				<item name="correios" xsi:type="string">correios</item>
+				<item name="viacep" xsi:type="string">viacep</item>
+			</argument>
+			<argument name="defaultEngine" xsi:type="string">correios</argument>
+			<argument name="path" xsi:type="string">eloom_core/postalcode/engine</argument>
+			<argument name="scopeType" xsi:type="string">default</argument>
+		</arguments>
+	</type>
 </config>

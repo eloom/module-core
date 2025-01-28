@@ -13,6 +13,15 @@
 				<label>System Information</label>
 				<frontend_model>Eloom\Core\Block\Adminhtml\System\Config\Info</frontend_model>
 			</group>
+
+			<group id="postalcode" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>PostalCode Settings</label>
+				<field id="engine" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>PostalCode Provider</label>
+					<source_model>Eloom\Core\Model\Adminhtml\System\Config\Source\PostalCode\Engine</source_model>
+					<comment><![CDATA[]]></comment>
+				</field>
+			</group>
 		</section>
 	</system>
 </config>
