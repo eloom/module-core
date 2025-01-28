@@ -6,7 +6,7 @@
 		</tab>
 		<section id="eloom" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
 			<class>separator-top</class>
-			<label>élOOm</label>
+			<label>elOOm</label>
 			<tab>eloom</tab>
 			<resource>Eloom_Core::config</resource>
 			<group id="information" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">

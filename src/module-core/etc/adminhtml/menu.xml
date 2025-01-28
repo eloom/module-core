@@ -5,7 +5,7 @@
 				 title="élOOm"
 				 module="Eloom_Core"
 				 action="adminhtml/system_config/edit/section/eloom"
-				 sortOrder="80"
+				 sortOrder="1"
 				 resource="Eloom_Core::menu"/>
 	</menu>
 </config>
