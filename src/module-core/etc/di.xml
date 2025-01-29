@@ -37,7 +37,8 @@
 
 	<preference for="Eloom\Core\Api\AutocompleteInterface" type="Eloom\Core\Model\Autocomplete" />
 
-	<preference for="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolverInterface" type="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolver"/>
+	<preference for="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolverInterface"
+				type="Eloom\Core\Model\ResourceModel\PostalCode\EngineResolver"/>
 
 	<type name="Eloom\Core\Model\Adminhtml\System\Config\Source\PostalCode\Engine">
 		<arguments>
@@ -53,7 +54,6 @@
 			</argument>
 		</arguments>
 	</type>
-
 	<type name="Eloom\Core\Model\ResourceModel\PostalCode\EngineHandlerFactory">
 		<arguments>
 			<argument name="handlers" xsi:type="array">
@@ -69,7 +69,7 @@
 				<item name="correios" xsi:type="string">correios</item>
 				<item name="viacep" xsi:type="string">viacep</item>
 			</argument>
-			<argument name="defaultEngine" xsi:type="string">correios</argument>
+			<argument name="defaultEngine" xsi:type="string">viacep</argument>
 			<argument name="path" xsi:type="string">eloom_core/postalcode/engine</argument>
 			<argument name="scopeType" xsi:type="string">default</argument>
 		</arguments>

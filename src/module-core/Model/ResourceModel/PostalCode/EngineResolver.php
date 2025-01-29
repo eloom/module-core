@@ -90,7 +90,7 @@ class EngineResolver implements EngineResolverInterface {
 	
 	public function getCurrentSearchEngine() {
 		$engine = $this->scopeConfig->getValue($this->path, $this->scopeType, $this->scopeCode);
-		
+
 		if (in_array($engine, $this->engines)) {
 			return $engine;
 		} else {

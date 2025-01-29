@@ -23,11 +23,11 @@ namespace Eloom\Core\Api;
 interface AutocompleteInterface {
 
 	/**
-	 * Get address by zipcode.
+	 * Get address by zipCode.
 	 *
-	 * @param string $zipcode
+	 * @param string $zipCode
 	 * @return string
 	 * @throws \Magento\Framework\Exception\LocalizedException
 	 */
-	public function getAddressByPostalCode($zipcode);
+	public function getAddressByZipCode($zipCode);
 }

@@ -17,22 +17,29 @@ namespace Eloom\Core\Model\ResourceModel\PostalCode;
 
 use GuzzleHttp\Client;
 use Magento\Directory\Model\RegionFactory;
+use Psr\Log\LoggerInterface;
 
 class ViaCepHandler implements EngineHandlerInterface {
 	
 	private $regionFactory;
-	
-	public function __construct(RegionFactory $regionFactory) {
+
+	/**
+	 * @var LoggerInterface
+	 */
+	private $logger;
+
+	public function __construct(RegionFactory $regionFactory, LoggerInterface $logger) {
 		$this->regionFactory = $regionFactory;
+		$this->logger = $logger;
 	}
 	
 	/**
 	 * @inheritDoc
 	 */
-	public function query(string $postalcode): array {
+	public function query(string $postalCode): array {
 		$address = [];
 		$client = new Client();
-		$response = $client->get("https://viacep.com.br/ws/{$postalcode}/json/unicode/", [
+		$response = $client->get("https://viacep.com.br/ws/{$postalCode}/json/", [
 			'headers' => array_merge(array('Content-Type' => 'application/json')),
 			'query' => null
 		]);

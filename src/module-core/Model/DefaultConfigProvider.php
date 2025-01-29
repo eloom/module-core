@@ -32,8 +32,9 @@ class DefaultConfigProvider {
 	
 	public function getConfig() {
 		return [
-			'storeCode' => $this->storeManager->getStore()->getCode(),
-			'lang' => $this->getLanguage(),
+			'store' => [
+				'code' => $this->storeManager->getStore()->getCode()
+			]
 		];
 	}
 	

@@ -34,9 +34,9 @@ class Autocomplete implements AutocompleteInterface {
 	/**
 	 * @inheritDoc
 	 */
-	public function getAddressByPostalCode($zipcode) {
+	public function getAddressByZipCode($zipCode) {
 		$factory = $this->engineHandlerFactory->create();
-		$address = $factory->query($zipcode);
+		$address = $factory->query($zipCode);
 		
 		return $this->serializer->serialize($address);
 	}
